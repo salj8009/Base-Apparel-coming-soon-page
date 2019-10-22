@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-template-rows: 1fr;
+	  grid-template-areas: "texto imagen";
+	  height: 100vh;
+	}
+
+
+	.imagen { 
+		grid-area: imagen;
+		background: url("../images/hero-desktop.jpg");
+		background-repeat: no-repeat;
+		background-position: center top; 
+		background-size: cover;
+	}
+
+
+	.texto { 
+		grid-area: texto;
+		padding: 3em;
+	}
+
+	.logo {
+		background: url("../images/logo.svg");
+		background-repeat: no-repeat;
+		margin: 1em;
+		height: 40px;		
+	}
+	h1 {
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 600;
+    	font-size: 3.5em;
+    	letter-spacing: .2em;
+    	color: hsl(0, 6%, 24%);
+    	padding-top: 1.5em;
+	}	
+
+	.we {
+		color: hsl(0, 36%, 70%);
+		font-weight: 300;
+	}
+	.miTexto {
+		color: hsl(0, 36%, 70%);
+		font-family: 'Josefin Sans', sans-serif;
+		padding: 1em;
+	}	
+	.formulario {
+		position: absolute;
+		padding-left: 1em;
+    	padding-right: 2em;
+    	width: 40vw;
+	}
+	.correo {
+		border-radius: 86px 86px 86px 86px;
+		border: 1px solid hsl(0, 36%, 70%);
+		margin: 1em auto 2em auto;
+		padding: 1em;
+		position: absolute;
+		width: 35vw;
+	}	
+
+	.flecha {
+    background: hsl(0, 36%, 70%);
+    border-radius: 1.9em;
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    height: 3.6em;
+    float: right;
+    width: 5.5em;
+	}
+	.correo::placeholder {
+		color: hsl(0, 36%, 70%);
+	}	
+	.error {
+	display: none;
+	color: hsl(0, 93%, 68%);
+    position: absolute;
+    margin-top: 5em;
+    margin-left: 2em;
+	}
+	.errorImg {
+	display: none;
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    height: 3.6em;
+    float: right;
+    width: 5.5em;
+	}
+
+
+@media only screen
+and (max-width : 375px) {
+/* Styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "imagen" "texto";
+  height: 100vh;
+}
+
+
+.imagen { 
+	grid-area: imagen; 
+	background: none;
+	width: 100vw;
+}
+.img {
+	background: url("../images/hero-mobile.jpg");
+	width: 375px;
+    height: 250px;
+}
+	.logo {
+		background: url("../images/logo.svg");
+		background-repeat: no-repeat;
+		margin: 1em;
+		height: 40px;		
+	}
+	.texto { 
+	grid-area: texto;
+	width: 100vw; 
+	text-align: center;
+	}
+	h1 {
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 400;
+    	font-size: 3.5em;
+    	letter-spacing: .3em;
+    	color: hsl(0, 6%, 24%);
+	}
+	.correo {
+		border-radius: 86px 86px 86px 86px;
+		border: 1px solid hsl(0, 36%, 70%);
+		margin: 1em auto 2em auto;
+		padding: 1em;
+		position: absolute;
+		width: auto;
+	}
+	.formulario {
+	position: absolute;
+	/*padding-left: 4em;
+    padding-right: 2em;*/
+	}
+	.flecha {
+    background: hsl(0, 36%, 70%);
+    border-radius: 1.9em;
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 12em;
+    margin-top: 1em;
+    height: 3.6em;
+	}
+
+	.correo::placeholder {
+		color: hsl(0, 36%, 70%);
+	}
+	.errorImg {
+	display: none;
+    position: absolute;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-left: 8.5em;
+    margin-right: auto;
+    margin-top: 1em;
+    height: 3.6em;
+    float: right;
+    width: 5.5em;
+	}
+
+
+}
+
+
